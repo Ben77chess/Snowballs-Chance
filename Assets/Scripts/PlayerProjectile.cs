@@ -5,11 +5,11 @@ using UnityEngine;
 public class PlayerProjectile : MonoBehaviour {
 
     // Speed of projectile
-    public float projectileSpeed;
+    public float projectileSpeed = 2;
     // Lifetime of projectile
-    public float time;
+    public float time = 1.5f;
     // Direction of projectile
-    public Vector2 direction = new Vector2(0, 1);
+    public Vector2 direction = new Vector2(0, 0);
 
     // Use this for initialization
     void Start () {
@@ -20,13 +20,8 @@ public class PlayerProjectile : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
         transform.position += new Vector3(direction.x, direction.y, 0) * projectileSpeed * Time.deltaTime;
-        time -= Time.deltaTime;
-        if (time < 0)
-        {
-            Destroy(gameObject);
-        }
-
+        //Destroys projectile after t seconds
+        Destroy(gameObject, time);
 	}
 }
