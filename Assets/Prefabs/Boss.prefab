@@ -92,7 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   standardBullet: {fileID: 114673068533464814, guid: 34910e71f35478248a0db655caf75b6c,
     type: 2}
-  singleFireSpeed: 0.4
+  singleFireSpeed: 0.2
 --- !u!114 &114890998185581622
 MonoBehaviour:
   m_ObjectHideFlags: 1
