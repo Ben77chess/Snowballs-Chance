@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,7 +20,7 @@ public class PlayerProjectile : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Translate(new Vector3(transform.right.x, transform.right.z, 0));
+        transform.position += new Vector3(direction.x, direction.y, 0) * projectileSpeed * Time.deltaTime;
         //Destroys projectile after t seconds
         Destroy(gameObject, time);
 	}
