@@ -370,34 +370,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 4466843145113262, guid: cb7a38e54b5d45d41a4b07d54fc6eabc, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.621
-      objectReference: {fileID: 0}
-    - target: {fileID: 4466843145113262, guid: cb7a38e54b5d45d41a4b07d54fc6eabc, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.513
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb7a38e54b5d45d41a4b07d54fc6eabc, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1712852002 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1365396017148822, guid: cb7a38e54b5d45d41a4b07d54fc6eabc,
-    type: 2}
-  m_PrefabInternal: {fileID: 1712852001}
---- !u!114 &1712852003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1712852002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb1c27bc8e8e5d4bbe0c86b92a1f3c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSpeed: 5
-  projectile: {fileID: 1590866244228592, guid: 91cfd4d308cd0e042a4103ff34f5b5be, type: 2}
-  projectileSpeed: 2
-  boss: {fileID: 4502899759351428, guid: 245a6fb2ce1cc654daff6d7b8a33d691, type: 2}
