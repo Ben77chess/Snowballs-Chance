@@ -9,7 +9,7 @@ public class PlayerProjectile : MonoBehaviour {
     // Lifetime of projectile
     public float time = 1.5f;
     // Direction of projectile
-    public Vector2 direction = new Vector2(0, 0);
+    public Vector2 direction = new Vector2(0, 1);
 
     // Use this for initialization
     void Start () {

@@ -28,8 +28,6 @@ public class PlayerController : MonoBehaviour {
 
         transform.Translate(horizontal, vertical, 0);
 
-        //TO DO: Fix orientation controls
-        orientPlayer();
 
         
 
@@ -46,7 +44,7 @@ public class PlayerController : MonoBehaviour {
         //Instantiate(projectile, transform.position, transform.rotation);
         Instantiate(projectile, transform.position + Vector3.up, Quaternion.identity);
     }
-
+    /*
     void orientPlayer()
     {
         Vector3 direction = boss.transform.position - transform.position;
@@ -55,5 +53,5 @@ public class PlayerController : MonoBehaviour {
         angle -= 90;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
-
+    */
 }
