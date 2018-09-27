@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour {
     // Player movement speed
     public float playerSpeed;
     // Player projectile
-    public GameObject projectile;
+    public PlayerProjectile projectile;
 
     public Transform boss;
 
