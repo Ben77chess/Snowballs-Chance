@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 //in progress
 public class BossFireManager : MonoBehaviour {
-    public PlayerProjectile standardBullet;
+    public BossProjectileStandard standardBullet;
+    public float singleFireSpeed; //seconds between single fire bullets
     // Use this for initialization
     void Start () {
-        StartCoroutine(singleFireRoutine());
+        StartCoroutine(singleFireRoutine(singleFireSpeed));
     }
 	
 	// Update is called once per frame
@@ -14,10 +15,10 @@ public class BossFireManager : MonoBehaviour {
 		
 	}
 
-    public IEnumerator singleFireRoutine() {
+    public IEnumerator singleFireRoutine(float firerate) {
         while (true) {
-            Instantiate(standardBullet, transform.position, Quaternion.identity);
-            yield return new WaitForSeconds(1);
+            Instantiate(standardBullet, transform.position, transform.rotation);
+            yield return new WaitForSeconds(firerate);
         }
     }
 }
