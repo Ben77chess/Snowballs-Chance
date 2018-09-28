@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour {
 
 
         
-        if (Input.GetMouseButtonDown(0) && Time.time > rate + last)
+        if (Input.GetMouseButton(0) && Time.time > rate + last)
         {
             last = Time.time;
 
