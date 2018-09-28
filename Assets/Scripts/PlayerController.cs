@@ -16,42 +16,49 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        //Initial spawn point of player
+
+        transform.position = new Vector3(0, -3.5f, 0);
+
+
     }
 	
 	// Update is called once per frame
 	void Update () {
 
+        FaceMouse();
+
+
         var horizontal = Input.GetAxis("Horizontal") * Time.deltaTime * playerSpeed;
-        var vertical = Input.GetAxis("Vertical") * Time.deltaTime * playerSpeed;
+        var vertical = Input.GetAxis("Vertical") * Time.deltaTime * playerSpeed;   
 
 
-
-        transform.Translate(horizontal, vertical, 0);
+        transform.Translate(horizontal, vertical, 0, Space.World);
 
 
         
-
-
-        if (Input.GetButton("Jump") && Time.time > rate + last)
+        if (Input.GetMouseButtonDown(0) && Time.time > rate + last)
         {
             last = Time.time;
+
             Fire();
         }
     }
 
     void Fire()
     {
-        //Instantiate(projectile, transform.position, transform.rotation);
-        Instantiate(projectile, transform.position + Vector3.up, Quaternion.identity);
+
+        Instantiate(projectile, transform.position, Quaternion.identity);
     }
-    /*
-    void orientPlayer()
+
+    void FaceMouse()
     {
-        Vector3 direction = boss.transform.position - transform.position;
-        direction.Normalize();
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        angle -= 90;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        Vector3 mousePos = Input.mousePosition;
+        mousePos = Camera.main.ScreenToWorldPoint(mousePos);
+
+        Vector2 dir = new Vector2(mousePos.x - transform.position.x, mousePos.y - transform.position.y);
+        transform.up = dir;
     }
-    */
+
+
 }

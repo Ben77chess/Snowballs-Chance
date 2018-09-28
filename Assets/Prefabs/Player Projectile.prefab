@@ -73,9 +73,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64f2979d75cb2e543941bb39ee37c282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 2
+  player: {fileID: 4466843145113262, guid: cb7a38e54b5d45d41a4b07d54fc6eabc, type: 2}
+  projectileSpeed: 5
   time: 1.5
-  direction: {x: 0, y: 1}
 --- !u!212 &212155481650257926
 SpriteRenderer:
   m_ObjectHideFlags: 1

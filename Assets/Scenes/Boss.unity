@@ -229,6 +229,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114271579361052162, guid: cb7a38e54b5d45d41a4b07d54fc6eabc,
+        type: 2}
+      propertyPath: boss
+      value: 
+      objectReference: {fileID: 4502899759351428, guid: 245a6fb2ce1cc654daff6d7b8a33d691,
+        type: 2}
+    - target: {fileID: 114271579361052162, guid: cb7a38e54b5d45d41a4b07d54fc6eabc,
+        type: 2}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 114815903448235184, guid: 91cfd4d308cd0e042a4103ff34f5b5be,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb7a38e54b5d45d41a4b07d54fc6eabc, type: 2}
   m_IsPrefabAsset: 0
