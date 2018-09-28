@@ -190,6 +190,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1403264183 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114271579361052162, guid: cb7a38e54b5d45d41a4b07d54fc6eabc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1712852001}
+  m_Script: {fileID: 11500000, guid: 7eb1c27bc8e8e5d4bbe0c86b92a1f3c9, type: 3}
 --- !u!1001 &1508861565
 Prefab:
   m_ObjectHideFlags: 0
@@ -241,9 +247,19 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 5.291
       objectReference: {fileID: 0}
+    - target: {fileID: 114890998185581622, guid: 245a6fb2ce1cc654daff6d7b8a33d691,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1403264183}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 245a6fb2ce1cc654daff6d7b8a33d691, type: 2}
   m_IsPrefabAsset: 0
+--- !u!4 &1584991344 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4502899759351428, guid: 245a6fb2ce1cc654daff6d7b8a33d691,
+    type: 2}
+  m_PrefabInternal: {fileID: 1508861565}
 --- !u!1 &1624451997
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,6 +386,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114271579361052162, guid: cb7a38e54b5d45d41a4b07d54fc6eabc,
+        type: 2}
+      propertyPath: boss
+      value: 
+      objectReference: {fileID: 1584991344}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb7a38e54b5d45d41a4b07d54fc6eabc, type: 2}
   m_IsPrefabAsset: 0

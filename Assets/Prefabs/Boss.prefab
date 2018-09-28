@@ -21,9 +21,11 @@ GameObject:
   - component: {fileID: 4502899759351428}
   - component: {fileID: 212223009137617968}
   - component: {fileID: 114890998185581622}
-  - component: {fileID: 50208047912133478}
   - component: {fileID: 58505659904896700}
   - component: {fileID: 114702909689325306}
+  - component: {fileID: 50440080195560272}
+  - component: {fileID: 58098826531588214}
+  - component: {fileID: 114625335929952000}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -44,7 +46,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50208047912133478
+--- !u!50 &50440080195560272
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
@@ -52,18 +54,33 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1128981662850852}
   m_BodyType: 0
-  m_Simulated: 1
+  m_Simulated: 0
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 2
+  m_Constraints: 0
+--- !u!58 &58098826531588214
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1128981662850852}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.21
 --- !u!58 &58505659904896700
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -79,6 +96,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.21
+--- !u!114 &114625335929952000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1128981662850852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f76222bb2356845a846da95a2a2e45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  standardBullet: {fileID: 114673068533464814, guid: 34910e71f35478248a0db655caf75b6c,
+    type: 2}
+  singleFireSpeed: 0.1
 --- !u!114 &114702909689325306
 MonoBehaviour:
   m_ObjectHideFlags: 1
