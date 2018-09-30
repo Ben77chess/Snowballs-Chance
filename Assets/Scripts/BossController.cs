@@ -9,8 +9,10 @@ public class BossController : MonoBehaviour {
     public float movementSpeed;
 	// Use this for initialization
 	void Start () {
-        
-	}
+        //Initial Boss position
+        transform.position = new Vector3(0, 3.5f, 0);
+
+    }
 	
 	// Update is called once per frame
 	void Update () {

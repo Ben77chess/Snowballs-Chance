@@ -161,7 +161,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6.778254
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -183,7 +183,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 16275061}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -233,7 +233,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4502899759351428, guid: 245a6fb2ce1cc654daff6d7b8a33d691, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4502899759351428, guid: 245a6fb2ce1cc654daff6d7b8a33d691, type: 2}
       propertyPath: m_LocalScale.x
@@ -341,7 +341,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1624451997}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.013, y: -0.001, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.33507, y: 1, z: 0.99000114}
   m_Children: []
   m_Father: {fileID: 0}
@@ -368,15 +368,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4466843145113262, guid: cb7a38e54b5d45d41a4b07d54fc6eabc, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4466843145113262, guid: cb7a38e54b5d45d41a4b07d54fc6eabc, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4466843145113262, guid: cb7a38e54b5d45d41a4b07d54fc6eabc, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4466843145113262, guid: cb7a38e54b5d45d41a4b07d54fc6eabc, type: 2}
       propertyPath: m_LocalRotation.w
@@ -384,7 +384,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4466843145113262, guid: cb7a38e54b5d45d41a4b07d54fc6eabc, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114271579361052162, guid: cb7a38e54b5d45d41a4b07d54fc6eabc,
         type: 2}
