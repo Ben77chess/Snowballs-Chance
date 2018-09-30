@@ -6,10 +6,11 @@ using UnityEngine.SceneManagement;
 public class BossHealthManager : MonoBehaviour {
 
     public int health;
+    private int maxHealth;
     public ParticleSystem hiteffect;
 	// Use this for initialization
 	void Start () {
-		
+        maxHealth = health;
 	}
 	
 	// Update is called once per frame
@@ -18,7 +19,6 @@ public class BossHealthManager : MonoBehaviour {
 	}
 
     void OnTriggerEnter2D(Collider2D col) {
-        Debug.Log("Collision!");
         if (col.gameObject.tag == "FriendlyBullet") {
             decreaseHealth(1);
             Instantiate(hiteffect, col.gameObject.transform.position, Quaternion.identity);
@@ -28,6 +28,7 @@ public class BossHealthManager : MonoBehaviour {
 
     public void decreaseHealth(int damage) {
         health -= damage;
+        UIManager.uiManager.updateBossHealthUI(health, maxHealth);
         if (health <= 0) {
             Die();
         }
