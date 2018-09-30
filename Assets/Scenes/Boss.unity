@@ -232,6 +232,25 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb7a38e54b5d45d41a4b07d54fc6eabc, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1483034476 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1128981662850852, guid: 245a6fb2ce1cc654daff6d7b8a33d691,
+    type: 2}
+  m_PrefabInternal: {fileID: 1677990527}
+--- !u!114 &1483034485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1483034476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f02824147fa50e34b81fb215f7f00126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  hiteffect: {fileID: 198646977676378710, guid: f3406a96d9c8b984d8d4dab454038783,
+    type: 2}
 --- !u!114 &1488115771 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114271579361052162, guid: cb7a38e54b5d45d41a4b07d54fc6eabc,
@@ -282,6 +301,11 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1488115771}
+    - target: {fileID: 114702909689325306, guid: 245a6fb2ce1cc654daff6d7b8a33d691,
+        type: 2}
+      propertyPath: singleFireSpeed
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 245a6fb2ce1cc654daff6d7b8a33d691, type: 2}
   m_IsPrefabAsset: 0

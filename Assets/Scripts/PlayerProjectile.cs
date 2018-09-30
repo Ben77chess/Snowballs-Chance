@@ -26,6 +26,7 @@ public class PlayerProjectile : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+<<<<<<< HEAD
 
 
         //transform.position = transform.position + Camera.main.transform.forward * projectileSpeed * Time.deltaTime;
@@ -39,6 +40,9 @@ public class PlayerProjectile : MonoBehaviour {
 
 
         //transform.position += transform.position * projectileSpeed * Time.deltaTime;
+=======
+        transform.position += transform.up * projectileSpeed * Time.deltaTime;
+>>>>>>> b7e7a745c73333b82b4d102cdcb399035c4b5d1b
         //Destroys projectile after t seconds
         Destroy(gameObject, time);
 	}
