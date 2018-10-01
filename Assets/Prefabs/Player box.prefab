@@ -37,8 +37,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1365396017148822}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.78, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -2.73, z: 0}
   m_LocalScale: {x: 0.4, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -93,7 +93,10 @@ MonoBehaviour:
   playerSpeed: 5
   projectile: {fileID: 114815903448235184, guid: 91cfd4d308cd0e042a4103ff34f5b5be,
     type: 2}
-  boss: {fileID: 4502899759351428, guid: 245a6fb2ce1cc654daff6d7b8a33d691, type: 2}
+  crosshair: {fileID: 2800000, guid: 9d96c271aaff81b449de4550cbfca386, type: 3}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
+  boss: {fileID: 0}
 --- !u!114 &114955248579663378
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -141,7 +144,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 99d4572f974e6564191ea4b8ee86d1f6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c2906993bca597243b73b06261092ddf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

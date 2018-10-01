@@ -9,6 +9,10 @@ public class PlayerController : MonoBehaviour {
     // Player projectile
     public PlayerProjectile projectile;
 
+    public Texture2D crosshair;
+    public CursorMode cursorMode = CursorMode.Auto;
+    public Vector2 hotSpot = Vector2.zero;
+
     public Transform boss;
 
     private float rate = 0.25f;
@@ -20,6 +24,7 @@ public class PlayerController : MonoBehaviour {
 
         transform.position = new Vector3(0, -3.5f, 0);
 
+        Cursor.SetCursor(crosshair, hotSpot, cursorMode);
 
     }
 	
@@ -27,7 +32,7 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 
 
-
+        
         FaceMouse();
 
 
