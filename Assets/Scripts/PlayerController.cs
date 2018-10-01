@@ -31,8 +31,14 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        //limits player to camera fov
+        Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
+        pos.x = Mathf.Clamp01(pos.x);
+        pos.y = Mathf.Clamp01(pos.y);
+        transform.position = Camera.main.ViewportToWorldPoint(pos);
 
-        
+
+
         FaceMouse();
 
 
