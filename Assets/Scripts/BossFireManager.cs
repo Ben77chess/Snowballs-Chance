@@ -38,6 +38,14 @@ public class BossFireManager : MonoBehaviour {
 
     //Fire Patterns
 
+   
+
+    public IEnumerator bomb(float bombrate)
+    {
+        //transform.position = transform.position + Camera.main.transform.forward * projectileSpeed * Time.deltaTime;
+        //set bomb at player pos
+    }
+
     public IEnumerator singleFireRoutine(float firerate, float bulletspeed) {
         standardBullet.projectileSpeed = bulletspeed;
         while (true) {
