@@ -7,6 +7,8 @@ public class UIManager : MonoBehaviour {
 
     public static UIManager uiManager;
     public Image bossHealth;
+    public PlayerHealthUIManager playerHealth;
+
 	// Use this for initialization
 	void Start () {
         uiManager = this;

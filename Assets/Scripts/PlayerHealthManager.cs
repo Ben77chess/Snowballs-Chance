@@ -28,6 +28,7 @@ public class PlayerHealthManager : MonoBehaviour {
     public void decreaseHealth(int damage) {
         if (!immune) {
             health -= damage;
+            UIManager.uiManager.playerHealth.UpdateLives(health);
             if (health <= 0) {
                 Die();
             }
