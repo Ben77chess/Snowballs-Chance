@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 //in progress
 public class BossFireManager : MonoBehaviour {
-    public BossProjectileStandard standardBullet;
+    public BossProjectile standardBullet;
+    public BossProjectile[] bullets;
     public float singleFireSpeed, pulseSpeed; //seconds between single fire bullets
 
     private Action[] strategies;
@@ -13,7 +14,9 @@ public class BossFireManager : MonoBehaviour {
     void Start () {
         strategies = new Action[] { slowPulseFastSingle, fastPulseSlowSingle};
         int i = rand.Next(strategies.Length);
+        int j = rand.Next(bullets.Length);
         strategies[i]();
+        standardBullet = bullets[j];
 
 
         //StartCoroutine(singleFireRoutine(singleFireSpeed, 10));
