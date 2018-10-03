@@ -95,7 +95,7 @@ MonoBehaviour:
     type: 2}
   bullets:
   - {fileID: 114673068533464814, guid: 34910e71f35478248a0db655caf75b6c, type: 2}
-  - {fileID: 114266980660140414, guid: ddf450ef006b789408201056f6cca73a, type: 2}
+  - {fileID: 114242053930549662, guid: ddf450ef006b789408201056f6cca73a, type: 2}
   singleFireSpeed: 1
   pulseSpeed: 3
 --- !u!114 &114890998185581622
