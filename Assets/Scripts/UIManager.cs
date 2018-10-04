@@ -8,10 +8,17 @@ public class UIManager : MonoBehaviour {
     public static UIManager uiManager;
     public Image bossHealth;
     public PlayerHealthUIManager playerHealth;
+    public int bossesDefeated = 0;
 
-	// Use this for initialization
-	void Start () {
+
+    void Awake() {
+        bossesDefeated = 0;
         uiManager = this;
+    }
+
+    // Use this for initialization
+    void Start () {
+
 	}
 	
 	// Update is called once per frame

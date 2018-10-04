@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 58011629111348030}
   - component: {fileID: 114242053930549662}
   m_Layer: 0
-  m_Name: BossProjectileGrow
+  m_Name: BossProjectileStandard 1 1
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
