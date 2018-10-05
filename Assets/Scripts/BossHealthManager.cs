@@ -9,13 +9,27 @@ public class BossHealthManager : MonoBehaviour {
     public int health;
     public int maxHealth = 10;
     public ParticleSystem hiteffect;
+
+    public AudioClip hit1;
+    public AudioClip hit2;
+    public AudioClip hit3;
+    public float volLow = .5f;
+    public float volHigh = 1.0f;
+    public float pitchLow = .75f;
+    public float pitchHigh = 1.5f;
+
+    private AudioSource source;
     private System.Random rand;
+
 	// Use this for initialization
 	void Start () {
         //health = maxHealth * Math.Max(UIManager.uiManager.bossesDefeated, 1) + rand.Next(10) * UIManager.uiManager.bossesDefeated; // 1st, maxHealth 2nd maxHealth + 0-9, 3rd maxHelath * 2 + 0-18(evens), 4th 3*maxHealth + 0-27(threes) ...
         health = maxHealth * Math.Max(UIManager.uiManager.bossesDefeated,1); //WIP for balance, but the idea is there.
         maxHealth = health;
-	}
+
+        source = GetComponent<AudioSource>();
+        AudioClip[] hitSounds = new AudioClip[] { hit1, hit2, hit3 };
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -24,6 +38,13 @@ public class BossHealthManager : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D col) {
         if (col.gameObject.tag == "FriendlyBullet") {
+            //play a random hit sound from a group of three and add random variation of vol or pitch
+            float vol = Random.Range(volLow, volHigh);
+            int sound = Random.Range(0, 2);
+            source.pitch = Random.Range(pitchLow, pitchHigh);
+            source.PlayOneShot(hitSound[sound], vol);
+
+
             decreaseHealth(1);
             Instantiate(hiteffect, col.gameObject.transform.position, Quaternion.identity);
             //col.gameObject.Die(); Destroy bullet, explosion fx etc.
