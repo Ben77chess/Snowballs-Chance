@@ -222,9 +222,10 @@ MonoBehaviour:
   maxHealth: 10
   hiteffect: {fileID: 198646977676378710, guid: f3406a96d9c8b984d8d4dab454038783,
     type: 2}
-  hit1: {fileID: 8300000, guid: 39458c316730d3e459ca7cfc7da18042, type: 3}
-  hit2: {fileID: 8300000, guid: 3c45233c796523242bc94b1d55c7144f, type: 3}
-  hit3: {fileID: 8300000, guid: 3e1a66584c5965749915bd66ed0d948a, type: 3}
+  hitSounds:
+  - {fileID: 8300000, guid: 3c45233c796523242bc94b1d55c7144f, type: 3}
+  - {fileID: 8300000, guid: 39458c316730d3e459ca7cfc7da18042, type: 3}
+  - {fileID: 8300000, guid: 45aee5560fdf89947b109ce7a8d7a9f3, type: 3}
   volLow: 0.5
   volHigh: 1
   pitchLow: 0.75

@@ -10,17 +10,15 @@ public class BossHealthManager : MonoBehaviour {
     public int maxHealth = 10;
     public ParticleSystem hiteffect;
 
-    private AudioClip[] hitSounds;
-    public AudioClip hit1;
-    public AudioClip hit2;
-    public AudioClip hit3;
+
+    public AudioClip[] hitSounds;
+
     public float volLow = .5f;
     public float volHigh = 1.0f;
     public float pitchLow = .75f;
     public float pitchHigh = 1.5f;
 
     private AudioSource source;
-    private System.Random rand;
 
 	// Use this for initialization
 	void Start () {
@@ -29,7 +27,6 @@ public class BossHealthManager : MonoBehaviour {
         maxHealth = health;
 
         source = GetComponent<AudioSource>();
-        AudioClip[] hitSounds = new AudioClip[] { hit1, hit2, hit3 };
     }
 	
 	// Update is called once per frame
@@ -43,7 +40,7 @@ public class BossHealthManager : MonoBehaviour {
             float vol = UnityEngine.Random.Range(volLow, volHigh);
             int sound = UnityEngine.Random.Range(0, 2);
             source.pitch = UnityEngine.Random.Range(pitchLow, pitchHigh);
-            source.PlayOneShot(hitSounds[sound], vol);
+            source.PlayOneShot(hitSounds[UnityEngine.Random.Range(0, hitSounds.Length)]);
 
 
             decreaseHealth(1);
