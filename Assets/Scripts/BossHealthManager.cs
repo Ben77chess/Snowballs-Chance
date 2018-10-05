@@ -10,6 +10,7 @@ public class BossHealthManager : MonoBehaviour {
     public int maxHealth = 10;
     public ParticleSystem hiteffect;
 
+    private AudioClip[] hitSounds;
     public AudioClip hit1;
     public AudioClip hit2;
     public AudioClip hit3;
@@ -39,10 +40,10 @@ public class BossHealthManager : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D col) {
         if (col.gameObject.tag == "FriendlyBullet") {
             //play a random hit sound from a group of three and add random variation of vol or pitch
-            float vol = Random.Range(volLow, volHigh);
-            int sound = Random.Range(0, 2);
-            source.pitch = Random.Range(pitchLow, pitchHigh);
-            source.PlayOneShot(hitSound[sound], vol);
+            float vol = UnityEngine.Random.Range(volLow, volHigh);
+            int sound = UnityEngine.Random.Range(0, 2);
+            source.pitch = UnityEngine.Random.Range(pitchLow, pitchHigh);
+            source.PlayOneShot(hitSounds[sound], vol);
 
 
             decreaseHealth(1);
