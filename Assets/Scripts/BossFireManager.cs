@@ -12,7 +12,7 @@ public class BossFireManager : MonoBehaviour {
     System.Random rand = new System.Random();
     // Use this for initialization
     void Start () {
-        strategies = new Action[] { slowPulseFastSingle, fastPulseSlowSingle, opposingSpirals, bulletCloud };
+        strategies = new Action[] {  hellSphere }; // slowPulseFastSingle, fastPulseSlowSingle, opposingSpirals, bulletCloud, ThreePulse, spiralSpew,
         int i = rand.Next(strategies.Length);
         int j = rand.Next(bullets.Length);
         Debug.Log("Strat no: " + i);
@@ -32,32 +32,47 @@ public class BossFireManager : MonoBehaviour {
 
     //Strategies
     public void slowPulseFastSingle() {
-        StartCoroutine(singleFireRoutine(.2f, 10));
-        StartCoroutine(pulseRoutine(5, 3, 8));
+        StartCoroutine(singleFireRoutine(.2f, 15));
+        StartCoroutine(pulseRoutine(5, 4, 16));
     }
 
     public void fastPulseSlowSingle() {
-        StartCoroutine(singleFireRoutine(2, 5));
-        StartCoroutine(pulseRoutine(1, 6, 12));
+        StartCoroutine(singleFireRoutine(1.5f, 25));
+        StartCoroutine(pulseRoutine(1, 15, 12));
     }
 
     public void opposingSpirals() {
-        StartCoroutine(spiralCounterClockWiseRoutine(2, 10, 12, .11f));
-        StartCoroutine(spiralClockWiseRoutine(2, 10, 12, .1f));
+        StartCoroutine(spiralCounterClockWiseRoutine(2, 15, 12, .11f));
+        StartCoroutine(spiralClockWiseRoutine(2, 15, 12, .1f));
+        StartCoroutine(spiralCounterClockWiseRoutine(2.5f, 20, 16, .1f));
     }
 
     public void bulletCloud() {
-        StartCoroutine(randomRoutine(.2f, 20, 5, 1, 180));
+        StartCoroutine(randomRoutine(.2f, 30, 5, 1, 180));
     }
 
+    public void ThreePulse() {
+        StartCoroutine(pulseRoutine(.5f, 10, 4));
+        StartCoroutine(pulseRoutine(1.75f, 15, 12));
+        StartCoroutine(pulseRoutine(2.5f, 8, 16));
+    }
+
+    public void spiralSpew() {
+        StartCoroutine(randomRoutine(.2f, 30, 3, 2, 45));
+        StartCoroutine(spiralClockWiseRoutine(1, 20, 20, .15f));
+    }
+
+    public void hellSphere() {
+        StartCoroutine(randomRoutine(.1f, 40, 4, 0, 360));
+    }
     //Fire Patterns
 
-   
+
 
     //public IEnumerator bomb(float bombrate)
     //{
-        //transform.position = transform.position + Camera.main.transform.forward * projectileSpeed * Time.deltaTime;
-        //set bomb at player pos
+    //transform.position = transform.position + Camera.main.transform.forward * projectileSpeed * Time.deltaTime;
+    //set bomb at player pos
     //}
 
     public IEnumerator singleFireRoutine(float firerate, float bulletspeed) {

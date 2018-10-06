@@ -16,7 +16,7 @@ public class BossHealthManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         //health = maxHealth * Math.Max(UIManager.uiManager.bossesDefeated, 1) + rand.Next(10) * UIManager.uiManager.bossesDefeated; // 1st, maxHealth 2nd maxHealth + 0-9, 3rd maxHelath * 2 + 0-18(evens), 4th 3*maxHealth + 0-27(threes) ...
-        health = maxHealth * Math.Max(UIManager.uiManager.bossesDefeated,1); //WIP for balance, but the idea is there.
+        health = maxHealth + 6 * UIManager.uiManager.bossesDefeated; //WIP for balance, but the idea is there.
         maxHealth = health;
 
         

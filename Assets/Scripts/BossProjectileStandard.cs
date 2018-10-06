@@ -9,8 +9,8 @@ public class BossProjectileStandard : BossProjectile {
     // Use this for initialization
 
     void Start () {
-        projectileSpeed = 2;
-        time = 10;
+        projectileSpeed = 5;
+        time = 30;
         maxScale = 2;
 	}
 	

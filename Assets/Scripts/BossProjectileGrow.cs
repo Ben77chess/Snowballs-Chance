@@ -7,8 +7,8 @@ public class BossProjectileGrow : BossProjectile {
 	// Use this for initialization
 	void Start () {
         maxScale = 2;
-        time = 7;
-        projectileSpeed = 2;
+        time = 25;
+        projectileSpeed = 3;
 	}
 	
 	// Update is called once per frame
