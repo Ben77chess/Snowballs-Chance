@@ -29,8 +29,6 @@ public class BossHealthManager : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D col) {
         if (col.gameObject.tag == "FriendlyBullet") {
-           
-
 
             decreaseHealth(1);
             Instantiate(hiteffect, col.gameObject.transform.position, Quaternion.identity);
@@ -52,8 +50,13 @@ public class BossHealthManager : MonoBehaviour {
         Time.timeScale = 0;
         health = maxHealth;
         UIManager.uiManager.updateBossHealthUI(health, maxHealth);
-        Destroy(this.GetComponent<SpriteRenderer>()); //this will break when Jonah detaches the SR.
-        Instantiate(this.gameObject, new Vector3(0, 0, 0), Quaternion.identity);
+        Destroy(this.GetComponent<SpriteRenderer>()); //this will break when Jonah detaches the SpriteRenderer.
+
+        GameObject newBoss = Instantiate(this.gameObject, new Vector3(0, 0, 0), Quaternion.identity);
+        Renderer rend = newBoss.GetComponent<SpriteRenderer>();
+        rend.material.color = UnityEngine.Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
+
+
         yield return new WaitForSecondsRealtime(3);
         Time.timeScale = 1;
         Destroy(this.gameObject);
