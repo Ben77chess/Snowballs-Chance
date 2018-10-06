@@ -9,11 +9,13 @@ public class UIManager : MonoBehaviour {
     public Image bossHealth;
     public PlayerHealthUIManager playerHealth;
     public int bossesDefeated = 0;
+    public Text bossHealthText;
 
 
     void Awake() {
         bossesDefeated = 0;
         uiManager = this;
+        bossHealthText.text = "Bosses Defeated: " + bossesDefeated;
     }
 
     // Use this for initialization
@@ -29,5 +31,6 @@ public class UIManager : MonoBehaviour {
     public void updateBossHealthUI(float current, float max) {
         float fill = current / max;
         bossHealth.fillAmount = fill;
+        bossHealthText.text = "Bosses Defeated: " + bossesDefeated;
     }
 }
