@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114625335929952000}
   - component: {fileID: 114935613731322804}
   - component: {fileID: 82131833732237158}
+  - component: {fileID: 114568632133115166}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -176,6 +177,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &114568632133115166
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1128981662850852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2a3ca2185e87cb46a59b3d0df8ced83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitSounds:
+  - {fileID: 8300000, guid: 3e1a66584c5965749915bd66ed0d948a, type: 3}
+  - {fileID: 8300000, guid: 3c45233c796523242bc94b1d55c7144f, type: 3}
+  - {fileID: 8300000, guid: 39458c316730d3e459ca7cfc7da18042, type: 3}
+  - {fileID: 8300000, guid: 45aee5560fdf89947b109ce7a8d7a9f3, type: 3}
 --- !u!114 &114625335929952000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -222,14 +239,6 @@ MonoBehaviour:
   maxHealth: 10
   hiteffect: {fileID: 198646977676378710, guid: f3406a96d9c8b984d8d4dab454038783,
     type: 2}
-  hitSounds:
-  - {fileID: 8300000, guid: 3c45233c796523242bc94b1d55c7144f, type: 3}
-  - {fileID: 8300000, guid: 39458c316730d3e459ca7cfc7da18042, type: 3}
-  - {fileID: 8300000, guid: 45aee5560fdf89947b109ce7a8d7a9f3, type: 3}
-  volLow: 0.5
-  volHigh: 1
-  pitchLow: 0.75
-  pitchHigh: 1.5
 --- !u!212 &212223009137617968
 SpriteRenderer:
   m_ObjectHideFlags: 1
