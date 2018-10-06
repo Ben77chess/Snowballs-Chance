@@ -215,40 +215,9 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224259704185967222, guid: 105ff131ebdd44946a3bdfbdb44de93d,
-        type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224259704185967222, guid: 105ff131ebdd44946a3bdfbdb44de93d,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224259704185967222, guid: 105ff131ebdd44946a3bdfbdb44de93d,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: -42
-      objectReference: {fileID: 0}
-    - target: {fileID: 114881520528326476, guid: 105ff131ebdd44946a3bdfbdb44de93d,
-        type: 2}
-      propertyPath: playerHealth
-      value: 
-      objectReference: {fileID: 813131180}
-    - target: {fileID: 224827791279563332, guid: 105ff131ebdd44946a3bdfbdb44de93d,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 105ff131ebdd44946a3bdfbdb44de93d, type: 2}
   m_IsPrefabAsset: 0
---- !u!114 &813131180 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114697459932169112, guid: 105ff131ebdd44946a3bdfbdb44de93d,
-    type: 2}
-  m_PrefabInternal: {fileID: 223192705}
-  m_Script: {fileID: 11500000, guid: dd2c79178e68d5f4ea1f16a5204072cb, type: 3}
 --- !u!1 &963001468
 GameObject:
   m_ObjectHideFlags: 0
