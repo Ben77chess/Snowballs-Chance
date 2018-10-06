@@ -21,6 +21,7 @@ public class PlayerHealthManager : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D col) {
         if(col.gameObject.tag == "EnemyBullet") {
             decreaseHealth(1);
+            Destroy(col.gameObject);
             //col.gameObject.Die(); Destroy bullet, explosion fx etc.
         }
     }

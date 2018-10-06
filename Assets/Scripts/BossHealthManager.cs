@@ -32,6 +32,7 @@ public class BossHealthManager : MonoBehaviour {
 
             decreaseHealth(1);
             Instantiate(hiteffect, col.gameObject.transform.position, Quaternion.identity);
+            Destroy(col.gameObject);
             //col.gameObject.Die(); Destroy bullet, explosion fx etc.
         }
     }
@@ -51,11 +52,22 @@ public class BossHealthManager : MonoBehaviour {
         health = maxHealth;
         UIManager.uiManager.updateBossHealthUI(health, maxHealth);
         Destroy(this.GetComponent<SpriteRenderer>()); //this will break when Jonah detaches the SpriteRenderer.
-
+        //New color for new boss instantiation
         GameObject newBoss = Instantiate(this.gameObject, new Vector3(0, 0, 0), Quaternion.identity);
         Renderer rend = newBoss.GetComponent<SpriteRenderer>();
         rend.material.color = UnityEngine.Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
 
+        //destroys all projectiles upon boss defeat
+        GameObject[] eBullet = GameObject.FindGameObjectsWithTag("EnemyBullet");
+        foreach (GameObject e in eBullet)
+        {
+            Destroy(e);
+        }
+        GameObject[] bullet = GameObject.FindGameObjectsWithTag("FriendlyBullet");
+        foreach (GameObject bul in bullet)
+        {
+            Destroy(bul);
+        }
 
         yield return new WaitForSecondsRealtime(3);
         Time.timeScale = 1;
