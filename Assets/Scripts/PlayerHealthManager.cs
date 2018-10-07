@@ -19,6 +19,7 @@ public class PlayerHealthManager : MonoBehaviour {
 	}
 
     void OnTriggerEnter2D(Collider2D col) {
+        //If hit by an enemy projectile, decrease the health and destroy the projectile
         if(col.gameObject.tag == "EnemyBullet") {
             decreaseHealth(1);
             Destroy(col.gameObject);
@@ -27,6 +28,7 @@ public class PlayerHealthManager : MonoBehaviour {
     }
 
     public void decreaseHealth(int damage) {
+        //Temporary immune status if hit
         if (!immune) {
             health -= damage;
             UIManager.uiManager.playerHealth.UpdateLives(health);
@@ -42,10 +44,12 @@ public class PlayerHealthManager : MonoBehaviour {
 
     public void Die() {
         //further death logic when we decide what to do
+        //reloads the game scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     IEnumerator Immune(float immuneTime) {
+        //Adds player color change when hit for a visual effect
         immune = true;
         float startTime = Time.time;
         float flashes = 10;

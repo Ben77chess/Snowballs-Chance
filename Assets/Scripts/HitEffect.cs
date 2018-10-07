@@ -13,7 +13,7 @@ public class HitEffect : MonoBehaviour {
 	void Update () {
 		
 	}
-
+    //Adds hit affect for the boss when hit by the player projectile
     IEnumerator DestroyAfter(float lifetime) {
         yield return new WaitForSeconds(lifetime);
         Destroy(this.gameObject);

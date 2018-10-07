@@ -12,6 +12,7 @@ public class BossFireManager : MonoBehaviour {
     System.Random rand = new System.Random();
     // Use this for initialization
     void Start () {
+        //Choose from strategies randomly
         strategies = new Action[] { densePulse, slowPulseFastSingle, fastPulseSlowSingle, opposingSpirals, bulletCloud, threePulse, spiralSpew, hellSphere }; // slowPulseFastSingle, fastPulseSlowSingle, opposingSpirals, bulletCloud, ThreePulse, spiralSpew,
         int i = rand.Next(strategies.Length);
         int j = rand.Next(bullets.Length);

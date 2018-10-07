@@ -18,6 +18,7 @@ public class BossController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        //Have the boss follow and face the player
         transform.right = player.transform.position - transform.position;
         transform.Translate(new Vector3(Math.Abs(transform.right.normalized.x * movementSpeed * Time.deltaTime), transform.right.normalized.y * movementSpeed * Time.deltaTime, 0));
 	}

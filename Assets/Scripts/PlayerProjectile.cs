@@ -16,7 +16,7 @@ public class PlayerProjectile : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-
+        //Gets the mouse position and returns a normalized vector
         mousePosition = Camera.main.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
         mousePosition.z = 0;
         directionVector = (mousePosition - transform.position).normalized;
@@ -25,22 +25,14 @@ public class PlayerProjectile : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-
-
         //transform.position = transform.position + Camera.main.transform.forward * projectileSpeed * Time.deltaTime;
-        //set bomb at player pos
+        //set bomb at player position, could be another game mechanic later
 
+        //Shoots projectile at mouse position
         transform.Translate(directionVector * projectileSpeed * Time.deltaTime);
 
-
         //transform.position = Vector2.MoveTowards(transform.position, mousePosition, projectileSpeed);
-        //goes to mouse position, then stops there
-
-
-        //transform.position += transform.position * projectileSpeed * Time.deltaTime;
-
-        //transform.position += transform.up * projectileSpeed * Time.deltaTime;
+        //goes to mouse position, then stops there, good for another game mechanic?
 
         //Destroys projectile after t seconds
         Destroy(gameObject, time);

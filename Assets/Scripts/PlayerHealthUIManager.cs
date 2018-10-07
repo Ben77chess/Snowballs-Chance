@@ -16,6 +16,7 @@ public class PlayerHealthUIManager : MonoBehaviour {
 	}
 
     public void UpdateLives(int lives) {
+        //Displays the player health UI
         for (int i = 0; i < hearts.Length; i++) {
             if (i < lives) {
                 hearts[i].enabled = true;

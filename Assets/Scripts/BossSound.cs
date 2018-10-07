@@ -10,6 +10,7 @@ public class BossSound : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        //Get the audio source
         source = GetComponent<AudioSource>();
     }
 	

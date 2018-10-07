@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour {
 
 
     void Awake() {
+        //Add a bosses defeated counter to the UI to track player progress
         bossesDefeated = 0;
         uiManager = this;
         bossHealthText.text = "Bosses Defeated: " + bossesDefeated;
@@ -29,6 +30,7 @@ public class UIManager : MonoBehaviour {
 	}
 
     public void updateBossHealthUI(float current, float max) {
+        //Displays the boss' health
         float fill = current / max;
         bossHealth.fillAmount = fill;
         bossHealthText.text = "Bosses Defeated: " + bossesDefeated;

@@ -22,7 +22,7 @@ public class PlayerSound : MonoBehaviour {
     {
         if (col.gameObject.tag == "EnemyBullet")
         {
-            //play a random hit sound from a group
+            //play a random hit sound from a group upon impact
             source.PlayOneShot(hitSounds[UnityEngine.Random.Range(0, hitSounds.Length)]);
         }
     }

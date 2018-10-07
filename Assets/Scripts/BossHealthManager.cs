@@ -28,6 +28,7 @@ public class BossHealthManager : MonoBehaviour {
 	}
 
     void OnTriggerEnter2D(Collider2D col) {
+        //decrease boss health when hit by the player bullet, destroys the projectile
         if (col.gameObject.tag == "FriendlyBullet") {
 
             decreaseHealth(1);
@@ -36,7 +37,7 @@ public class BossHealthManager : MonoBehaviour {
             //col.gameObject.Die(); Destroy bullet, explosion fx etc.
         }
     }
-
+    //Health manager
     public void decreaseHealth(int damage) {
         health -= damage;
         UIManager.uiManager.updateBossHealthUI(health, maxHealth);
@@ -44,14 +45,14 @@ public class BossHealthManager : MonoBehaviour {
             StartCoroutine(Die());
         }
     }
-
+    
     public IEnumerator Die() {
         //further death logic when we decide what to do
         UIManager.uiManager.bossesDefeated += 1;
         Time.timeScale = 0;
         health = maxHealth;
         UIManager.uiManager.updateBossHealthUI(health, maxHealth);
-        Destroy(this.GetComponent<SpriteRenderer>()); //this will break when Jonah detaches the SpriteRenderer.
+        Destroy(this.GetComponent<SpriteRenderer>()); //this will break if Jonah detaches the SpriteRenderer.
         //New color for new boss instantiation
         GameObject newBoss = Instantiate(this.gameObject, new Vector3(0, 0, 0), Quaternion.identity);
         Renderer rend = newBoss.GetComponent<SpriteRenderer>();
