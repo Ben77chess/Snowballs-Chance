@@ -47,12 +47,11 @@ public class BossHealthManager : MonoBehaviour {
     }
     
     public IEnumerator Die() {
-        //further death logic when we decide what to do
         UIManager.uiManager.bossesDefeated += 1;
-        Time.timeScale = 0;
+        Time.timeScale = 0; //pause
         health = maxHealth;
-        UIManager.uiManager.updateBossHealthUI(health, maxHealth);
-        Destroy(this.GetComponent<SpriteRenderer>()); //this will break if Jonah detaches the SpriteRenderer.
+        UIManager.uiManager.updateBossHealthUI(health, maxHealth); //refill health bar UI for clarity
+        Destroy(this.GetComponent<SpriteRenderer>()); //destroy old boss sprite for clarity
         //New color for new boss instantiation
         GameObject newBoss = Instantiate(this.gameObject, new Vector3(0, 0, 0), Quaternion.identity);
         Renderer rend = newBoss.GetComponent<SpriteRenderer>();
@@ -70,7 +69,7 @@ public class BossHealthManager : MonoBehaviour {
             Destroy(bul);
         }
 
-        yield return new WaitForSecondsRealtime(3);
+        yield return new WaitForSecondsRealtime(3); //have to use realtime because timeScale = 0
         Time.timeScale = 1;
         Destroy(this.gameObject);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);

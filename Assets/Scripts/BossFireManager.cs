@@ -20,10 +20,6 @@ public class BossFireManager : MonoBehaviour {
         Debug.Log("Bullet no: " + j);
         strategies[i]();
         standardBullet = bullets[j];
-
-
-        //StartCoroutine(singleFireRoutine(singleFireSpeed, 10));
-        //StartCoroutine(pulseRoutine(pulseSpeed, 2, 30));
     }
 	
 	// Update is called once per frame
@@ -91,7 +87,7 @@ public class BossFireManager : MonoBehaviour {
 
     public IEnumerator pulseRoutine(float firerate, float bulletspeed, int pulseBullets) {
         standardBullet.projectileSpeed = bulletspeed;
-        float angleInc = 360 / pulseBullets;
+        float angleInc = 360 / pulseBullets; //this strategy, used several times, allows us to adapt to different numbers of bullets as the spread pattern will always change so they are evenly spaced.
         while (true) {
             for(int i = 0; i < pulseBullets; i++) {
                 Instantiate(standardBullet, transform.position, Quaternion.AngleAxis(angleInc*i, Vector3.forward));
@@ -134,7 +130,7 @@ public class BossFireManager : MonoBehaviour {
                 currentTime = Time.time - startTime;
                 standardBullet.projectileSpeed = (float)rand.NextDouble() * maxbulletspeed;
                 angle = rand.Next(angleOfEffect);
-                angle = angle - angleOfEffect/2; //allows us to change to + or - value around transform.right
+                angle = angle - angleOfEffect/2; //allows us to change to + or - value around transform.right, Ex: If angleOfEffect is 90, this value will be ~ between -45 and 45.
                 Instantiate(standardBullet, transform.position, transform.rotation * Quaternion.AngleAxis(angle, Vector3.forward)); //friggin quaternions
                 yield return new WaitForSeconds((float)rand.NextDouble() * maxfirerate);
             }
