@@ -12,7 +12,7 @@ public class BossFireManager : MonoBehaviour {
     System.Random rand = new System.Random();
     // Use this for initialization
     void Start () {
-        strategies = new Action[] {  hellSphere }; // slowPulseFastSingle, fastPulseSlowSingle, opposingSpirals, bulletCloud, ThreePulse, spiralSpew,
+        strategies = new Action[] { fastPulseSlowSingle, densePulse };//slowPulseFastSingle, fastPulseSlowSingle, opposingSpirals, bulletCloud, threePulse, spiralSpew, hellSphere }; // slowPulseFastSingle, fastPulseSlowSingle, opposingSpirals, bulletCloud, ThreePulse, spiralSpew,
         int i = rand.Next(strategies.Length);
         int j = rand.Next(bullets.Length);
         Debug.Log("Strat no: " + i);
@@ -38,7 +38,7 @@ public class BossFireManager : MonoBehaviour {
 
     public void fastPulseSlowSingle() {
         StartCoroutine(singleFireRoutine(1.5f, 25));
-        StartCoroutine(pulseRoutine(1, 15, 12));
+        StartCoroutine(pulseRoutine(1, 15, 15));
     }
 
     public void opposingSpirals() {
@@ -51,7 +51,7 @@ public class BossFireManager : MonoBehaviour {
         StartCoroutine(randomRoutine(.2f, 30, 5, 1, 180));
     }
 
-    public void ThreePulse() {
+    public void threePulse() {
         StartCoroutine(pulseRoutine(.5f, 10, 4));
         StartCoroutine(pulseRoutine(1.75f, 15, 12));
         StartCoroutine(pulseRoutine(2.5f, 8, 16));
@@ -64,6 +64,11 @@ public class BossFireManager : MonoBehaviour {
 
     public void hellSphere() {
         StartCoroutine(randomRoutine(.1f, 40, 4, 0, 360));
+    }
+
+    public void densePulse() {
+        StartCoroutine(randomRoutine(.4f, 20, 4, 0, 360));
+        StartCoroutine(pulseRoutine(.79f, 10, 12));
     }
     //Fire Patterns
 

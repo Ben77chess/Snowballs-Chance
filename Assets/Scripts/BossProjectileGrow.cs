@@ -14,7 +14,7 @@ public class BossProjectileGrow : BossProjectile {
 	// Update is called once per frame
 	void Update () {
 		if (transform.localScale.x < maxScale) {
-            transform.localScale += new Vector3(Time.deltaTime*.1f*projectileSpeed, Time.deltaTime*.2f*projectileSpeed, 0); //If they move faster they grow faster and v.v.
+            transform.localScale += new Vector3(Time.deltaTime*.05f*projectileSpeed, Time.deltaTime*.05f*projectileSpeed, 0); //If they move faster they grow faster and v.v.
         }
         transform.position += transform.right * projectileSpeed * Time.deltaTime;
         Destroy(gameObject, time);
