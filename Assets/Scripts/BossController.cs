@@ -11,7 +11,8 @@ public class BossController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         //Initial Boss position
-        movementSpeed = movementSpeed + UIManager.uiManager.bossesDefeated/4; //again WIP
+        StopAllCoroutines();
+        movementSpeed = movementSpeed + UIManager.uiManager.bossesDefeated/4f; //again WIP
         transform.position = new Vector3(0, 3.5f, 0);
 
     }
